@@ -9,12 +9,10 @@ donner différence entre include et require : inclut et exécute le fichier spé
 donner différence entre require_once et require : "require_once" identique à "require" sauf PHP vérifie si le fichier à déjà été inclus et si c'est le cas ne l'inclus pas une 2 éme fois.
 */
 
-$p1 = new Personne();
+$p1 = new Personne ();
 // $p2 = new Personne("DUCHEMIN", "Alice","1985-01-17");
 $p1->setName('ALDERSON');
 $p1->setFirstname('Elliot');
-
-
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +27,8 @@ $p1->setFirstname('Elliot');
     
 
 <?php
-echo $p1->getName() ." ". $p1->getFirstname();
+
+echo $p1;
 
 ?>
 </body>

@@ -5,7 +5,7 @@ class Personne {
 
     private string $_name;
     private string $_firstname;
-    private DateTime $_birthD;
+    private DateTime $_birthd;
 
     // public function __construct(string $name, string $firstname, string $birthD){
     //     $this->_name = $name;
@@ -32,27 +32,19 @@ class Personne {
     }
 
 
-    // public function getFirstname(){
-    //     return $this ->_firstname;
-    // }
-    // public function getBirthdate(){
-    //     return $this ->_birthD;
-    // }
-
-
     // public function age(){
-    //     $_birthD = $this->_birthD;
+    //     $_birthd = $this->_birthd;
     //     $today = new DateTime();
-    //     $age = $_birthD -> diff($today);
+    //     $age = $_birthd -> diff($today);
     //     return $age->format('%y');
     // }
 
 
-    // faire to string 
-    public function __toString(){
-
+    // // faire to string 
+    public function __toString()
+    {
+        return "$this->_firstname._name";
     }
 }
-
 
 ?>
