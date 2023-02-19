@@ -15,7 +15,7 @@ class Personne {
 
     //setters 
 
-    public function setName($_name) {
+    public function setName($_name){
         $this->_name = $_name;
     }
     
@@ -23,27 +23,32 @@ class Personne {
         $this->_firstname = $_firstname;
     }
 
+    public function setBirthd($_birthd){
+        $this->_birthd = new DateTime($_birthd);
+
+    }
+    
     public function getName(){
         return $this ->_name;
     }
-
+    
     public function getFirstname(){
         return $this ->_firstname;
     }
-
-
-    // public function age(){
-    //     $_birthd = $this->_birthd;
-    //     $today = new DateTime();
-    //     $age = $_birthd -> diff($today);
-    //     return $age->format('%y');
-    // }
+    
+    
+    public function getAge(){
+        $today = new DateTime();
+        $age = $this->_birthd -> diff($today);
+        return $age->format('%y');
+    }
 
 
     // // faire to string 
+    
     public function __toString()
     {
-        return "$this->_firstname._name";
+        return $this->_firstname." ". $this->_name. " a ". $this->getAge(). " ans.";
     }
 }
 

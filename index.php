@@ -10,9 +10,15 @@ donner différence entre require_once et require : "require_once" identique à "
 */
 
 $p1 = new Personne ();
-// $p2 = new Personne("DUCHEMIN", "Alice","1985-01-17");
 $p1->setName('ALDERSON');
 $p1->setFirstname('Elliot');
+$p1->setBirthd('1986-09-17');
+
+
+
+// $p2 = new Personne("DUCHEMIN", "Alice","1985-01-17");
+
+
 ?>
 
 <!DOCTYPE html>
