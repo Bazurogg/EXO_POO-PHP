@@ -48,7 +48,7 @@ class Personne {
     
     public function __toString()
     {
-        return $this->_firstname." ". $this->_name. " a ". $this->getAge(). " ans.";
+        return $this->_firstname." ". $this->_name. " a ". $this->getAge(). " ans."."<br>";
     }
 }
 

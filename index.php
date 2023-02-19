@@ -1,8 +1,8 @@
 
-
 <?php
 
 include("Personne.php");
+
 /*
 donner différence entre include et require : inclut et exécute le fichier spécifié en argument. A la différence que "require" lorsqu'une erreur survient il stop le script alors que "include" permets au script de continuer de fonctionner.
 
@@ -14,7 +14,10 @@ $p1->setName('ALDERSON');
 $p1->setFirstname('Elliot');
 $p1->setBirthd('1986-09-17');
 
-
+$p2 = new Personne ();
+$p2->setName('MOSS');
+$p2->setFirstname('Angela');
+$p2->setBirthd('1988-02-07');
 
 // $p2 = new Personne("DUCHEMIN", "Alice","1985-01-17");
 
@@ -27,15 +30,33 @@ $p1->setBirthd('1986-09-17');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+
+<h1>Exercice 15</h1>
+
+<p>Créer une classe Personne (nom, prénom et date de naissance).<br>
+Instancier 2 personnes et afficher leurs informations : nom, prénom et âge.<br>
+$p1 = new Personne("ALDERSON", "Elliot", "1985-09-17") ;<br>
+$p2 = new Personne("MOSS", "Angela", "1988-02-07") ;</p>
+
+<fieldset>
+
+<legend><h2>Résultat</h2></legend>
 
 <?php
 
 echo $p1;
+// echo ".<br>";
+echo $p2;
+
 
 ?>
+
+</fieldset>
+
 </body>
 </html>

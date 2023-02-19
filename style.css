@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: #F6E3CE;
+}
+
+h1{
+  color: #F79F81;
+  text-transform: uppercase;
+}
+
+h2{
+  color: #DF3A01;
+  text-decoration: underline;
+}
+
+fieldset{
+    display: inline-block;
+    background-color: white;
+}
