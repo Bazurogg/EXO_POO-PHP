@@ -2,6 +2,7 @@
 <?php
 
 include("Personne.php");
+include("car.php");
 
 /*
 donner différence entre include et require : inclut et exécute le fichier spécifié en argument. A la différence que "require" lorsqu'une erreur survient il stop le script alors que "include" permets au script de continuer de fonctionner.
@@ -19,7 +20,18 @@ $p2->setName('MOSS');
 $p2->setFirstname('Angela');
 $p2->setBirthd('1988-02-07');
 
-// $p2 = new Personne("DUCHEMIN", "Alice","1985-01-17");
+$v1 = new Car ();
+$v1 -> setMarque('Peugeot');
+$v1 -> setModele('408');
+$v1 -> setNbportes(5);
+$v1 -> turnOff(false);
+
+$v2 = new Car ();
+$v2 -> setMarque('Citroën');
+$v2 -> setModele('C4');
+$v2 -> setNbportes(3);
+
+
 
 
 ?>
@@ -73,10 +85,8 @@ v2 ➔ "Citroën","C4",3<br>
 
 <?php
 
-
-
-
-
+echo $v1;
+echo $v2;
 
 
 
