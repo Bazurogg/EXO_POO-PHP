@@ -4,8 +4,8 @@ class Car {
     private string $marque;
     private string $modele;
     private int $nbPortes;
-    private int $vitesseActuelle;
-    private $demarrer;
+    private string $vitesse;
+    private bool $contact;
 
     public function setMarque($marque){
         $this -> marque = $marque;
@@ -19,34 +19,30 @@ class Car {
         $this -> nbportes = $nbportes;
     }
 
-    public function setVitesseActuelle($vitesseactuelle){
-        $this -> vitesssactuelle = $vitesseactuelle;
+    public function setVitesse($vitesse){
+        $this -> vitesse = $vitesse;
     }
 
-    public function setDemarrer($demarrer){
-        $this -> demarrer = $demarrer;
+    public function setContact($contact) {
+        $this->contact = $contact;
     }
-
-    public function turnOn() {
-        if ($this->demarrer) {
-            $this->demarrer = true;
-            echo "Voiture démarrée";
+    
+    public function demarrer() {
+        if ($this->contact) {
+            echo "La voiture est déjà allumée.<br>";
         } else {
-            echo "Voiture déjà en marche";
+            $this->contact = true;
+            echo "La voiture démarre.<br>";
         }
     }
 
-    public function turnOff() {
-        if ($this->demarrer) {
-            $this->demarrer = false;
-            echo "Arrêt voiture";
+    public function eteindre() {
+        if ($this->contact) {
+            $this->contact = false;
+            echo "La voiture s'éteint.<br>";
         } else {
-            echo "Voiture déjà arrétée";
+            echo "La voiture est déjà éteinte.<br>";
         }
-    }
-
-    public function demarrer(){
-        return $this -> demarrer;
     }
 
     public function getMarque(){
@@ -61,19 +57,21 @@ class Car {
         return $this -> nbportes;
     }
     
-
-    public function __toString()
-    {
-        return $this->marque." ". $this->modele." ". $this->nbportes." portes.". $this->demarrer."<br>";
+    public function getVitesse(){
+        return $this -> vitesse;
     }
 
+    public function __toString(){
+        $etat = $this -> contact ? "est démarée":"est éteinte";
+        return "Marque et modéle du véhicule : " . $this->marque." ". $this->modele."<br>"."Nombres de portes : ". $this->nbportes."<br>". $etat ."<br>". $this->vitesse ." Km / h."."<br>";
+
+    //     if ($this->contact) {
+    //         return "La voiture est allumée.<br>";
+    //     } else {
+    //         return "La voiture est éteinte.<br>";
+    //     }
+    }
 
 }
-
-
-
-
-
-
 
 ?>

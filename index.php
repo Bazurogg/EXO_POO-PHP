@@ -24,15 +24,13 @@ $v1 = new Car ();
 $v1 -> setMarque('Peugeot');
 $v1 -> setModele('408');
 $v1 -> setNbportes(5);
-$v1 -> turnOff(false);
+$v1 -> setVitesse('50');
+$v1 -> setContact(false);
 
 $v2 = new Car ();
 $v2 -> setMarque('Citroën');
 $v2 -> setModele('C4');
 $v2 -> setNbportes(3);
-
-
-
 
 ?>
 
@@ -86,7 +84,9 @@ v2 ➔ "Citroën","C4",3<br>
 <?php
 
 echo $v1;
-echo $v2;
+echo "<br>";
+
+// echo $v2;
 
 
 
