@@ -36,7 +36,7 @@ $p2->setBirthd('1988-02-07');
 
 <body>
 
-<h1>Exercice 15</h1>
+<h1>Exercice 15 - PHP 1</h1>
 
 <p>Créer une classe Personne (nom, prénom et date de naissance).<br>
 Instancier 2 personnes et afficher leurs informations : nom, prénom et âge.<br>
@@ -50,12 +50,38 @@ $p2 = new Personne("MOSS", "Angela", "1988-02-07") ;</p>
 <?php
 
 echo $p1;
-// echo ".<br>";
 echo $p2;
+
+?>
+</fieldset>
+
+
+
+<h1>Exercice 13 - PHP 2</h1>
+
+<p>Créer une classe Voiture possédant les propriétés suivantes : marque, modèle, nbPortes et<br>
+vitesseActuelle ainsi que les méthodes demarrer( ), accelerer( ) et stopper( ) en plus<br>
+des accesseurs (get) et mutateurs (set) traditionnels. La vitesse initiale de chaque véhicule<br>
+instancié est de 0. Une méthode personnalisée pourra afficher toutes les informations d’un véhicule.<br>
+v1 ➔ "Peugeot","408",5<br>
+v2 ➔ "Citroën","C4",3<br>
+</p>
+
+<fieldset>
+
+<legend><h2>Résultat</h2></legend>
+
+<?php
+
+
+
+
+
+
+
 
 
 ?>
-
 </fieldset>
 
 </body>
