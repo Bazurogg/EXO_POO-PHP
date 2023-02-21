@@ -25,13 +25,14 @@ $v1 -> setMarque('Peugeot');
 $v1 -> setModele('408');
 $v1 -> setNbportes(5);
 $v1 -> setVitesse('50');
-$v1 -> setContact(false);
+$v1 -> setContact(true);
 
 $v2 = new Car ();
 $v2 -> setMarque('Citroën');
 $v2 -> setModele('C4');
 $v2 -> setNbportes(3);
-
+$v2 -> setVitesse('0');
+$v2 -> setContact(false);
 ?>
 
 <!DOCTYPE html>
@@ -53,9 +54,9 @@ Instancier 2 personnes et afficher leurs informations : nom, prénom et âge.<br
 $p1 = new Personne("ALDERSON", "Elliot", "1985-09-17") ;<br>
 $p2 = new Personne("MOSS", "Angela", "1988-02-07") ;</p>
 
-<fieldset>
 
-<legend><h2>Résultat</h2></legend>
+<fieldset>
+<h2>Résultat :</h2>
 
 <?php
 
@@ -78,18 +79,16 @@ v2 ➔ "Citroën","C4",3<br>
 </p>
 
 <fieldset>
-
-<legend><h2>Résultat</h2></legend>
+<h2>Résultat :</h2>
 
 <?php
 
+echo "<h3>Infos véhicule 1</h3>";
 echo $v1;
 echo "<br>";
-
-// echo $v2;
-
-
-
+echo "<h3>Infos véhicule 2</h3>";
+echo $v2;
+echo "<br>";
 
 ?>
 </fieldset>
