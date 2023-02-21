@@ -5,7 +5,8 @@ class Car {
     private string $modele;
     private int $nbPortes;
     private int $vitesse = 0;
-    private bool $contact;
+    private bool $contact = false;
+
 
     public function setMarque($marque){
         $this -> marque = $marque;
@@ -23,19 +24,15 @@ class Car {
         $this->contact = $contact;
     }
 
- 
-
     public function accelerer($vitesseAcceleration){
         if ($this->contact == false){
-echo "la voiture doit être allumée pour accélerer";
-} 
-else {
+            echo "la voiture doit être allumée pour accélerer";
+            } 
+        else {
             $this -> vitesse +=  $vitesseAcceleration;
             // $this -> vitesse =  $this -> vitesse + $vitesseAcceleration;
             echo "le Véhicule ".$this -> getMarque()." ".$this -> getModele()." accélére de : ".$vitesseAcceleration." Km / h."."<br>";
-
-        }
-
+            }
     }
 
     public function demarrer() {
@@ -76,7 +73,7 @@ else {
     }
     
     public function __toString(){
-        return "Marque et modéle du véhicule : " . $this -> marque." ". $this->modele."<br>"."Nombres de portes : ". $this->nbPortes."<br>"."Sa vitesse actuelle est de : ".$this->vitesse ." Km / h."."<br>";
+        return "Marque et modéle du véhicule : " . $this -> marque." ". $this->modele."<br>"."Nombres de portes : ". $this->nbPortes."<br>"."Sa vitesse actuelle est de : ".$this->vitesse." Km / h."."<br>";
     }
 
 }

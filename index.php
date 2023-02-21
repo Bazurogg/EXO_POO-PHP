@@ -25,14 +25,14 @@ $v1 -> setMarque('Peugeot');
 $v1 -> setModele('408');
 $v1 -> setNbportes(5);
 // $v1 -> setAcceleration('70');
-$v1 -> setContact(true);
+
 
 $v2 = new Car ();
 $v2 -> setMarque('Citroën');
 $v2 -> setModele('C4');
 $v2 -> setNbportes(3);
 // $v2 -> setAcceleration('0');
-$v2 -> setContact(false);
+
 ?>
 
 <!DOCTYPE html>
@@ -99,10 +99,7 @@ v2 ➔ "Citroën","C4",3<br>
 
         echo "<h3>Test Véhicule 1</h3>";
         echo $v1->demarrer();
-        echo $v1->stopper();
-        echo $v1->stopper();
-        echo $v1->demarrer();
-        $v1->accelerer(5);
+        $v1 -> accelerer(5);
         echo "";
         echo $v1->getVitesse()
 
