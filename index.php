@@ -81,6 +81,18 @@ v2 ➔ "Citroën","C4",3<br>
 <fieldset>
 <h2>Résultat :</h2>
 <div class="bloc">
+
+    <div class="bloctest1">
+        <?php
+
+        echo "<h3>Test Véhicule 1</h3>";
+        echo $v1->demarrer();
+        $v1 -> accelerer(130);
+        echo "";
+        echo $v1->getVitesse()
+
+        ?>  
+    </div>
     <div class="blocinfo">
         <?php
 
@@ -94,17 +106,6 @@ v2 ➔ "Citroën","C4",3<br>
         ?>
     </div>
 
-    <div class="bloctest1">
-        <?php
-
-        echo "<h3>Test Véhicule 1</h3>";
-        echo $v1->demarrer();
-        $v1 -> accelerer(5);
-        echo "";
-        echo $v1->getVitesse()
-
-        ?>  
-    </div>
 
 </div>
 </fieldset>
