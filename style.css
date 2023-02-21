@@ -25,6 +25,15 @@ fieldset{
     border-style: hidden;
 }
 
+.bloc{
+  display: flex;
+  justify-content: center;
+}
+
+.blocinfo{
+  margin-right: 70px;
+}
+
 p{
   color: antiquewhite;
 }

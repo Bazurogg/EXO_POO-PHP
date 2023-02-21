@@ -24,14 +24,14 @@ $v1 = new Car ();
 $v1 -> setMarque('Peugeot');
 $v1 -> setModele('408');
 $v1 -> setNbportes(5);
-$v1 -> setVitesse('50');
+// $v1 -> setAcceleration('70');
 $v1 -> setContact(true);
 
 $v2 = new Car ();
 $v2 -> setMarque('Citroën');
 $v2 -> setModele('C4');
 $v2 -> setNbportes(3);
-$v2 -> setVitesse('0');
+// $v2 -> setAcceleration('0');
 $v2 -> setContact(false);
 ?>
 
@@ -80,17 +80,36 @@ v2 ➔ "Citroën","C4",3<br>
 
 <fieldset>
 <h2>Résultat :</h2>
+<div class="bloc">
+    <div class="blocinfo">
+        <?php
 
-<?php
+        echo "<h3>Infos véhicule 1</h3>";
+        echo $v1;
+        echo "<br>";
+        echo "<h3>Infos véhicule 2</h3>";
+        echo $v2;
+        echo "<br>";
 
-echo "<h3>Infos véhicule 1</h3>";
-echo $v1;
-echo "<br>";
-echo "<h3>Infos véhicule 2</h3>";
-echo $v2;
-echo "<br>";
+        ?>
+    </div>
 
-?>
+    <div class="bloctest1">
+        <?php
+
+        echo "<h3>Test Véhicule 1</h3>";
+        echo $v1->demarrer();
+        echo $v1->stopper();
+        echo $v1->stopper();
+        echo $v1->demarrer();
+        $v1->accelerer(5);
+        echo "";
+        echo $v1->getVitesse()
+
+        ?>  
+    </div>
+
+</div>
 </fieldset>
 
 </body>
