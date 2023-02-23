@@ -8,7 +8,7 @@ class Livre {
 
     public function __construct($auteur, $titre, $parution, $nbdepages, $prix){
         $this -> auteur = $auteur;
-        $auteur->ajouterLivre($this);
+        $auteur -> ajouterLivre($this);
         $this -> titre = $titre;
         $this -> parution = $parution;
         $this -> nbdepages = $nbdepages;
@@ -36,7 +36,7 @@ class Livre {
     }
     
     public function __toString(){
-        return $this -> titre ."(".$this -> parution.")"." de ".$this -> auteur." : ".$this -> nbdepages." pages "."/ ".$this -> prix. " €."."<br>";
+        return $this -> titre ."(".$this -> parution.")"." : ".$this -> nbdepages." pages "."/ ".$this -> prix. " €."."<br>";
         
     }
 }
@@ -76,7 +76,7 @@ class Auteur {
     // Sa structure ce compose de 2 paramètres : en 1er le tableau sur lequel on souhaite ajouter des éléments et en 2éme le ou les éléments que l'on souhaite ajouter.
 
     public function afficherBibliographie() {
-        echo "Livres de " . $this->prenom . " " . $this->nom . " :"."<br>";
+        echo "<h3>Livres de " . $this->prenom . " " . $this->nom . " :"."</h3>";
         foreach($this->livres as $livre) {
           echo "_ " . $livre . "<br>";
         }

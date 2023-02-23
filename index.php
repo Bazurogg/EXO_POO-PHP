@@ -44,14 +44,14 @@ $stephenKing = new Auteur("Stephen", "King");
 $jrrTolkien = new Auteur("J.R.R.", "Tolkien");
 $it = new Livre($stephenKing,"It", 1986, 1138, 20);
 $simetierre = new Livre($stephenKing, "Simetierre", 1983, 374, 15);
-// $theStand = new Livre("Stephen King", "The Stand", "1978", "823", "14");
-// $shining = new Livre("Stephen King","Shining", "1977", "447", "16");
+$theStand = new Livre($stephenKing, "The Stand", 1978, 823, 14);
+$shining = new Livre($stephenKing,"Shining", 1977, 447, 16);
 
-// $theHobbit = new Livre("Tolkien", "The Hobbit", "1937", "287", "6");
-// $tlotrFellowshipOfTheRing = new Livre("Tolkien", "The Fellowship of The Ring", "1945", "722", "9" );
-// $tlotrTheTwoTowers = new Livre("Tolkien", "The Two Towers", "1954", "597", "9");
-// $tlotrTheReturnOfTheKing = new Livre("Tolkien", "The Return of The King", "1955", "722", "9");
-// $silmarillion = new Livre("Tolkien", "The Silmarillion", "1977", "356", "7");
+$theHobbit = new Livre($jrrTolkien, "The Hobbit", 1937, 287, 6);
+$tlotrFellowshipOfTheRing = new Livre($jrrTolkien, "The Fellowship of The Ring", 1945, 722, 9);
+$tlotrTheTwoTowers = new Livre($jrrTolkien, "The Two Towers", 1954, 597, 9);
+$tlotrTheReturnOfTheKing = new Livre($jrrTolkien, "The Return of The King", 1955, 722, 9);
+$silmarillion = new Livre($jrrTolkien, "The Silmarillion", 1977, 356, 7);
 
 
 ?>
@@ -211,7 +211,10 @@ complète d’un auteur :<br>
 // echo "<br>";
 // $jrrTolkien -> afficherBibliographie();
 // var_dump($stephenKing);
-$stephenKing-> afficherBibliographie();
+
+$stephenKing -> afficherBibliographie();
+echo "<br>";
+$jrrTolkien -> afficherBibliographie();
 ?>
 
 </fieldset>
