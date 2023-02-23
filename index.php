@@ -5,6 +5,7 @@ include("Personne.php");
 include("car.php");
 include("car2.php");
 include("mail.php");
+include("livres.php");
 
 
 /*
@@ -38,6 +39,21 @@ $voituree = new VoitureElec ("BMW", "I3", "100");
 
 $e1 = new Email ();
 $e2 = new Email ();
+
+$stephenKing = new Auteur("Stephen", "King");
+$jrrTolkien = new Auteur("J.R.R.", "Tolkien");
+$it = new Livre($stephenKing,"It", 1986, 1138, 20);
+$simetierre = new Livre($stephenKing, "Simetierre", 1983, 374, 15);
+// $theStand = new Livre("Stephen King", "The Stand", "1978", "823", "14");
+// $shining = new Livre("Stephen King","Shining", "1977", "447", "16");
+
+// $theHobbit = new Livre("Tolkien", "The Hobbit", "1937", "287", "6");
+// $tlotrFellowshipOfTheRing = new Livre("Tolkien", "The Fellowship of The Ring", "1945", "722", "9" );
+// $tlotrTheTwoTowers = new Livre("Tolkien", "The Two Towers", "1954", "597", "9");
+// $tlotrTheReturnOfTheKing = new Livre("Tolkien", "The Return of The King", "1955", "722", "9");
+// $silmarillion = new Livre("Tolkien", "The Silmarillion", "1977", "356", "7");
+
+
 ?>
 
 <!DOCTYPE html>
@@ -162,6 +178,45 @@ echo $e2 -> checkMail();
 
 ?>
 </fieldset>
+
+<h1>Exercice 16 - PHP 2</h1>
+
+<p>Vous êtes chargé(e) de créer un projet orienté objet permettant de gérer des livres et
+leurs auteurs respectifs.<br>
+Les livres sont caractérisés par :<br>
+</p>
+<ul>
+<li><span>un titre</span></li>
+<li><span>un nombre de pages</span></li>
+<li><span>une année de parution</span></li>
+<li><span>un prix</span></li>
+<li><span>un auteur</span></li>
+</ul>
+<p>
+Un auteur comporte un nom et un prénom.<br>
+Une méthode toString() sera appréciée dans chacune de vos classes.<br>
+Vous implémenterez une méthode afficherBibliographie() qui permettra d’afficher la bibliographie
+complète d’un auteur :<br>
+</p>
+
+<fieldset>   
+<h2>Résultat :</h2>
+
+<?php
+
+// $stephenKing -> ajouterLivre($it, $simetierre, $theStand, $shining);
+// $jrrTolkien -> ajouterLivre($theHobbit, $tlotrFellowshipOfTheRing, $tlotrTheTwoTowers, $tlotrTheReturnOfTheKing, $silmarillion);
+
+// $stephenKing -> afficherBibliographie();
+// echo "<br>";
+// $jrrTolkien -> afficherBibliographie();
+// var_dump($stephenKing);
+$stephenKing-> afficherBibliographie();
+?>
+
+</fieldset>
+
+
 
 </body>
 </html>
