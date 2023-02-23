@@ -67,7 +67,6 @@ echo $p2;
 </fieldset>
 
 
-
 <h1>Exercice 13 - PHP 2</h1>
 
 <p>Créer une classe Voiture possédant les propriétés suivantes : marque, modèle, nbPortes et<br>
@@ -85,12 +84,17 @@ v2 ➔ "Citroën","C4",3<br>
     <div class="bloctest1">
         <?php
 
-        echo "<h3>Test Véhicule 1</h3>";
+        echo "<h3>Test Véhicules</h3>";
         echo $v1->demarrer();
-        $v1 -> accelerer(130);
+        $v1 -> accelerer(50);
         echo "";
-        echo $v1->getVitesse()
-
+        echo $v2->demarrer();
+        echo $v2->stopper();
+        $v2 -> accelerer(20);
+        $v1 -> ralentir(10);
+        echo "La vitesse du véhicule ".$v1 -> getMarque()." ".$v1 -> getmodele()." est de : ".$v1->getVitesse()." Km / h."."<br>";
+        echo "La vitesse du véhicule ".$v2 -> getMarque()." ".$v2 -> getmodele()." est de : ".$v2->getVitesse()." Km / h."."<br>";
+        
         ?>  
     </div>
     <div class="blocinfo">
@@ -109,6 +113,38 @@ v2 ➔ "Citroën","C4",3<br>
 
 </div>
 </fieldset>
+
+<h1>Exercice 14 - PHP 2</h1>
+
+<p>Créer une classe Voiture possédant 2 propriétés (marque et modèle)<br> ainsi qu’une classe VoitureElec
+qui hérite (extends) de la classe Voiture et qui a une propriété supplémentaire (autonomie).<br>
+Instancier une voiture « classique » et une voiture « électrique » ayant les caractéristiques
+suivantes :<bR>
+Peugeot 408 : $v1 = new Voiture("Peugeot","408");<br>
+BMW i3 150 : $ve1 = new VoitureElec("BMW","I3",100);<br>
+Votre programme de test devra afficher les informations des 2 voitures de la façon suivante :<br>
+"echo $v1->getInfos()."<.br/>";<br>
+"echo $ve1->getInfos()."<.br/>";
+</p>
+
+<fieldset>
+<h2>Résultat :</h2>
+<?php
+
+
+
+
+
+
+
+
+
+
+
+
+?>
+</fieldset>
+
 
 </body>
 </html>

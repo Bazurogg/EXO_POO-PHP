@@ -26,7 +26,7 @@ class Car {
 
     public function accelerer($vitesseAcceleration){
         if ($this->contact == false){
-            echo "la voiture doit être allumée pour accélerer";
+            echo "Pour accélerer, il faut démarrer le véhicule ".$this -> marque." ".$this -> modele.".<br>";
             } 
         else {
             $this -> vitesse +=  $vitesseAcceleration;
@@ -34,22 +34,32 @@ class Car {
             echo "le Véhicule ".$this -> getMarque()." ".$this -> getModele()." accélére de : ".$vitesseAcceleration." Km / h."."<br>";
             }
     }
+    
+    public function ralentir($vitesseFrein){
+        if ($this->vitesse < $vitesseFrein){
+            echo "Le véhicule ".$this -> marque." ".$this -> modele." ne peut pas ralentir de plus que sa vitesse actuelle."."<br>";
+            } 
+        else {
+            $this -> vitesse = $this -> vitesse - $vitesseFrein;
+            echo "le Véhicule ".$this -> getMarque()." ".$this -> getModele()." ralentis de : ".$vitesseFrein." Km / h."."<br>";
+            }
+    }
 
     public function demarrer() {
         if ($this->contact == true) {
-            echo "La voiture est déjà en marche.<br>";
+            echo "Le véhicule ".$this -> marque." ".$this -> modele." est déjà en marche."."<br>";
         } else {
-            echo "La voiture démarre.<br>";
+            echo "Le véhicule " .$this -> marque." ".$this -> modele." démarre."."<br>";
             $this->contact = true;
         }
     }
     
     public function stopper() {
         if ($this->contact == false) {
-            echo "La voiture est déjà arrêter.<br>";
+            echo "Le véhicule ".$this -> marque." ".$this -> modele." est déjà arrêté."."<br>";
         } else {
             $this->contact = false;
-            echo "La voiture s'arrête.<br>";
+            echo "Le véhicule ".$this -> marque." ".$this -> modele." est stoppé."."<br>";
         }
     }
 
@@ -73,7 +83,7 @@ class Car {
     }
     
     public function __toString(){
-        return "Marque et modéle du véhicule : " . $this -> marque." ". $this->modele."<br>"."Nombres de portes : ". $this->nbPortes."<br>"."Sa vitesse actuelle est de : ".$this->vitesse." Km / h."."<br>";
+        return "Marque et modéle du véhicule : " . $this -> marque." ". $this->modele."<br>"."Nombres de portes : ". $this->nbPortes."<br>". $this -> contact()."<br>"."Sa vitesse actuelle est de : ".$this->vitesse." Km / h."."<br>";
     }
 
 }
