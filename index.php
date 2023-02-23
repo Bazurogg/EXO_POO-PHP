@@ -3,6 +3,9 @@
 
 include("Personne.php");
 include("car.php");
+include("car2.php");
+include("mail.php");
+
 
 /*
 donner différence entre include et require : inclut et exécute le fichier spécifié en argument. A la différence que "require" lorsqu'une erreur survient il stop le script alors que "include" permets au script de continuer de fonctionner.
@@ -24,15 +27,17 @@ $v1 = new Car ();
 $v1 -> setMarque('Peugeot');
 $v1 -> setModele('408');
 $v1 -> setNbportes(5);
-// $v1 -> setAcceleration('70');
-
 
 $v2 = new Car ();
 $v2 -> setMarque('Citroën');
 $v2 -> setModele('C4');
 $v2 -> setNbportes(3);
-// $v2 -> setAcceleration('0');
 
+$voiture1 = new Voiture ("Peugeot", "408");
+$voituree = new VoitureElec ("BMW", "I3", "100");
+
+$e1 = new Email ();
+$e2 = new Email ();
 ?>
 
 <!DOCTYPE html>
@@ -131,20 +136,31 @@ Votre programme de test devra afficher les informations des 2 voitures de la fa�
 <h2>Résultat :</h2>
 <?php
 
-
-
-
-
-
-
-
-
-
-
+echo $voiture1->getInfos();
+echo "<br>";
+echo $voituree ->getInfos();
 
 ?>
 </fieldset>
 
+<h1>Exercice 15 - PHP 2</h1>
+
+<p>En utilisant les ressources de la page http://php.net/manual/fr/book.filter.php<br>
+vérifier si une adresse e-mail a le bon format.<br>
+L’adresse elan@elan-formation.fr est une adresse e-mail valide<br>
+L’adresse contact@elan est une adresse e-mail invalide<br>
+</p>
+
+<fieldset>
+<h2>Résultat :</h2>
+<?php
+$e1 -> setEmail("elan@elan-formation.fr");
+echo $e1 -> checkMail();
+$e2 -> setEmail("contact@elan");
+echo $e2 -> checkMail();
+
+?>
+</fieldset>
 
 </body>
 </html>
