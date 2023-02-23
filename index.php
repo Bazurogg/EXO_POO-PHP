@@ -154,6 +154,7 @@ L’adresse contact@elan est une adresse e-mail invalide<br>
 <fieldset>
 <h2>Résultat :</h2>
 <?php
+
 $e1 -> setEmail("elan@elan-formation.fr");
 echo $e1 -> checkMail();
 $e2 -> setEmail("contact@elan");

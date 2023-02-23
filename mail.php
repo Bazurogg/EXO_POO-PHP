@@ -1,4 +1,5 @@
 <?php
+
 class Email {
     private $email;
 
@@ -18,7 +19,5 @@ class Email {
             }
     }
 }
-
-
 
 ?>
