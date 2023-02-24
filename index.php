@@ -204,14 +204,6 @@ complète d’un auteur :<br>
 
 <?php
 
-// $stephenKing -> ajouterLivre($it, $simetierre, $theStand, $shining);
-// $jrrTolkien -> ajouterLivre($theHobbit, $tlotrFellowshipOfTheRing, $tlotrTheTwoTowers, $tlotrTheReturnOfTheKing, $silmarillion);
-
-// $stephenKing -> afficherBibliographie();
-// echo "<br>";
-// $jrrTolkien -> afficherBibliographie();
-// var_dump($stephenKing);
-
 $stephenKing -> afficherBibliographie();
 echo "<br>";
 $jrrTolkien -> afficherBibliographie();
@@ -219,7 +211,42 @@ $jrrTolkien -> afficherBibliographie();
 
 </fieldset>
 
+<h1>Exercice POO - PHP 2 - BANQUE</h1>
 
+<p>Vous êtes chargé(e) de créer un projet orienté objet permettant de gérer des titulaires
+et leurs comptes bancaires respectifs.<br>
+Un compte bancaire est composé des éléments suivants :<br>
+</p>
 
+<ul>
+<li><span>Un libellé/span></li>
+<li><span>un solde initial</span></li>
+<li><span>une devise monétaire/span></li>
+<li><span>un titulaire monétaire</span></li>
+</ul>
+
+<p>
+un titulaire comporte :<br>
+
+<ul>
+<li><span>Un nom</span></li>
+<li><span>un prénom</span></li>
+<li><span>une date de naissance</span></li>
+<li><span>une ville</span></li>
+<li><span>L'ensemble de ces comptes bancaires</span></li>
+</ul>
+
+Un auteur comporte un nom et un prénom.<br>
+Une méthode toString() sera appréciée dans chacune de vos classes.<br>
+Vous implémenterez une méthode afficherBibliographie() qui permettra d’afficher la bibliographie
+complète d’un auteur :<br>
+</p>
+
+<fieldset>   
+<h2>Résultat :</h2>
+
+<?php
+
+?>
 </body>
 </html>
