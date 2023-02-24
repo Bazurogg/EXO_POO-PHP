@@ -1,6 +1,7 @@
 <?php
 
 class Titulaire{
+    
     private string $nom;
     private string $prenom;
     private DateTime $date;
@@ -11,7 +12,7 @@ class Titulaire{
     public function __construct($nom, $prenom, $date, $ville){
         $this -> prenom = $prenom;
         $this -> nom = $nom;
-        $this -> date = new DAteTime($date);
+        $this -> date = new DateTime($date);
         $this -> comptes = array();
     }
 

@@ -1,11 +1,18 @@
 <?php
 
-include ("compteBancaire.php");
+include ("Compte.php");
+include ("Titulaire.php");
 
 
 $t1 = new Titulaire("Scott", "Travis", "1992-04-30", "Houston");
 $t2 = new Titulaire("Kanye", "West", "1977-06-08", "Atlanta");
 
+
+$c1 = new Compte($t1, "comptecourant", "20", "$");
+$c2 = new Compte($t1, "compteepargne ", "300", "$");
+
+
+// var_dump($t1);
 
 ?>
 
@@ -60,6 +67,9 @@ Afficher toutes les informations d'un compte bancaire, notamment le nom prénom 
 <h2>Résultat :</h2>
 
 <?php
+
+$t1 -> afficherComptesBancaires();
+
 ?>
 
 
