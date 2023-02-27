@@ -27,11 +27,12 @@ fieldset{
 
 .bloc{
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  flex-direction: row-reverse;
 }
 
 .bloctest1{
-  margin-right:70px;
+  margin-left:70px;
 }
 
 p, li, span{

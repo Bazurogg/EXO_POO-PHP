@@ -1,17 +1,19 @@
 <?php
 
-include ("Compte.php");
-include ("Titulaire.php");
+include ("compte.php");
+include ("titulaire.php");
 
 
-$t1 = new Titulaire("Scott", "Travis", "1992-04-30", "Houston");
-$t2 = new Titulaire("Kanye", "West", "1977-06-08", "Atlanta");
+$t1 = new Titulaire("Stark", "Anthony", "1970-05-19", "Sofia");
+$t2 = new Titulaire("Wayne", "Bruce", "1915-04-07", "Gotham");
 
 
-$c1 = new Compte($t1, "comptecourant", "20", "$");
-$c2 = new Compte($t1, "compteepargne ", "300", "$");
+$c1 = new Compte($t1, "compte courant", 100, "$");
+$c2 = new Compte($t1, "compte epargne ", 368463216.745, "$");
 
-
+$c3 = new Compte($t2, "compte courant", 500000, "$");
+$c4 = new Compte($t2, "compte epargne", 10000005.99, "$");
+$c5 = new Compte($t2, "compte PEL", 60000, "$");
 // var_dump($t1);
 
 ?>
@@ -66,12 +68,45 @@ Afficher toutes les informations d'un compte bancaire, notamment le nom prénom 
 <fieldset>   
 <h2>Résultat :</h2>
 
-<?php
 
-$t1 -> afficherComptesBancaires();
+<div class="bloc">
+    
+    <div class="bloctest1">
+        <h3>Test Opérations bancaires :</h3>
+        <?php
+        echo $c1;
+        echo $c2;
+        echo "<br>";
+        $c1 -> crediter(200);
+        echo $c1;
+        echo "<br>";
+        $c1 -> debiter(290);
+        echo $c1;
+        echo "<br>";
+        echo $c3;
+        echo $c5;
+        echo "<br>";
+        $c3 -> virement($c5,20000);
+        echo "<br>";
+        echo $c3;
+        echo $c5;
 
-?>
 
+        ?>  
+    </div>
+    <div class="blocinfo">
+        <?php
+        $t1 -> afficherComptesBancaires();
+        $t2 -> afficherComptesBancaires();
+
+
+
+        ?>
+    </div>
+
+
+</div>
+</fieldset>
 
 
 </body>

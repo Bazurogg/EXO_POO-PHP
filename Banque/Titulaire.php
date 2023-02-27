@@ -13,6 +13,7 @@ class Titulaire{
         $this -> prenom = $prenom;
         $this -> nom = $nom;
         $this -> date = new DateTime($date);
+        $this -> ville = $ville;
         $this -> comptes = array();
     }
 
