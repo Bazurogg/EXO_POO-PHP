@@ -1,6 +1,6 @@
 <?php
 
-class Personne {
+class Client {
 
     private string $prenom;
     private string $nom;

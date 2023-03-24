@@ -43,6 +43,8 @@ class Chambre {
     
     public function getWifi() {
 
+        // condition check true ou false avec if pour savoir si le wifi est disponible ou pas
+
     
     }
 

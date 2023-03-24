@@ -1,11 +1,11 @@
 <?php
 
+include("chambre.php");
 
+$hotel1 = new Hotel ("Hilton", "Strasbourg", "10 rue de la Gare 67000 Strasbourg");
+$hotel2 = new Hotel ("Regent","Paris","61 rue Dauphine 75006 Paris");
 
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +16,12 @@
     <title>POO-Hotel</title>
 </head>
 <body>
+
+<?php
+
+echo $hotel1;
+
+?>
     
 </body>
 </html>

@@ -6,13 +6,15 @@ class Hotel {
     private string $adresseHotel;
     private string $ville;
     private array $chambres;
-    private array $resa;
+    // private array $resa;
 
     public function __construct($nomHotel, $ville, $adresseHotel){
 
         $this -> nomHotel = $nomHotel;
 
         $this -> adresseHotel = $adresseHotel;
+
+        $this -> ville = $ville;
 
         $this -> chambres = array ();
         
@@ -30,38 +32,21 @@ class Hotel {
 
     }
 
-
     public function getAdresseHotel() {
 
         return $this -> adresseHotel;
 
     }
 
-
-    
     public function ajouterChambre(Chambre $chambre) {
         
         $this -> chambres [] = $chambre;
     
     }
 
-    
-    
+    public function __toString(){
+        return $this -> nomHotel;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>
