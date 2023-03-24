@@ -1,5 +1,9 @@
 <?php
 
+
+include("chambre.php");
+
+
 class Hotel {
 
     private string $nomHotel;
@@ -42,6 +46,11 @@ class Hotel {
         
         $this -> chambres [] = $chambre;
     
+    }
+
+    public function infosHotel(){
+
+        return $this -> adresseHotel;
     }
 
     public function __toString(){

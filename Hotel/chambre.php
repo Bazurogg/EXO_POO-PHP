@@ -1,7 +1,5 @@
 <?php
 
-include("hotel.php");
-
 class Chambre {
 
     private int $numChambre;
@@ -14,6 +12,7 @@ class Chambre {
 
     public function __construct($hotel, $numChambre, $nbLit, $wifi, $prix, $etat){
 
+        $this -> hotel = $hotel;
         $hotel -> ajouterChambre($this);
         $this -> numChambre = $numChambre;
         $this -> nbLit = $nbLit;
@@ -44,15 +43,14 @@ class Chambre {
     public function getWifi() {
 
         // condition check true ou false avec if pour savoir si le wifi est disponible ou pas
-
     
     }
 
+    public function chambreInfos(){
 
-
-
+        return "Chambre : " .$this -> numChambre." (".$this -> nbLit." lits - ".$this -> prix." €";
+    }
     
-        
     
 }
 
