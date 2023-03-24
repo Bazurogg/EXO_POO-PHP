@@ -1,5 +1,7 @@
 <?php
 
+include("hotel.php");
+
 class Chambre {
 
     private int $numChambre;
@@ -51,9 +53,10 @@ class Chambre {
         return "Chambre : " .$this -> numChambre." (".$this -> nbLit." lits - ".$this -> prix." €";
     }
     
-    
+    public function __toString()
+    {
+        return $this -> numChambre. " ";
+    }
 }
-
-
 
 ?>

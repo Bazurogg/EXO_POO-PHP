@@ -1,9 +1,5 @@
 <?php
 
-
-include("chambre.php");
-
-
 class Hotel {
 
     private string $nomHotel;
