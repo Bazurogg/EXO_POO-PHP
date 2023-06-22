@@ -69,6 +69,12 @@ class Personne {
         
     }
 
+    public function AnnulationResa(Resa $resa) {
+        if ($key = array_search(resa, $this -> _resa) !== false ){
+            
+        }
+    }
+
     public function __toString() {
 
         return $this -> getPrenom() . " " . strtoupper($this -> getNom());
