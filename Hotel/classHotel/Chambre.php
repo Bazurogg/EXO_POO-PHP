@@ -10,7 +10,7 @@ class Chambre {
     private int $_nbLit;
     private array $_resa;
 
-    public function __construct(Hotel $hotel, $numChambre, $nbLit, $wifi, $prix, $dispo) {
+    public function __construct(Hotel $hotel, $numChambre, $nbLit, $wifi, $prix) {
 
         $hotel -> ajouterChambre($this);
         $this -> _hotel = $hotel;
@@ -18,7 +18,7 @@ class Chambre {
         $this -> _nbLit = $nbLit;
         $this -> _wifi = $wifi;
         $this -> _prix = $prix;
-        $this -> _dispo = $dispo;
+        $this -> _dispo = true;
         $this -> _resa = [];
         
     }
@@ -116,6 +116,9 @@ class Chambre {
 
     public function ajouterResa(Resa $resa){
         $this -> _resa[] = $resa;
+        if ($this -> getDispo() == true) {
+            $this -> _dispo = false;
+        }
         
     }
 

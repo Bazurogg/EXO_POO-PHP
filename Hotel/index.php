@@ -12,20 +12,14 @@ $hotel2 = new Hotel("Regent", "****", "61 Rue Dauphine", "75006", "Paris", 10);
 $client1 = new Personne ("Virgile","GIBELLO");
 $client2 = new Personne ("Micka","MURMANN");
 
-$chambre1 = new Chambre ($hotel1, "1", 2, false, 120, true);
-$chambre2 = new Chambre ($hotel1, "2", 2, false, 120, true);
-$chambre3 = new Chambre ($hotel1, "3", 2, false, 120, false);
-$chambre4 = new Chambre ($hotel1, "4", 2, false, 120, true);
-$chambre16 = new Chambre ($hotel1, "16", 2, true, 300, true);
-$chambre17 = new Chambre ($hotel1, "17", 2, true, 300, false);
-$chambre18 = new Chambre ($hotel1, "18", 2, true, 300, true);
-$chambre19 = new Chambre ($hotel1, "19", 2, true, 300, true);
-
-$resa1 = new Resa ($client1, $chambre17, "01-01-2021", "01-01-2021");
-$resa2 = new Resa ($client2, $chambre3, "11-03-2021", "15-03-2021");
-$resa3 = new Resa ($client2, $chambre4, "01-04-2021", "17-04-2021");
-
-
+$chambre1 = new Chambre ($hotel1, "1", 2, false, 120);
+$chambre2 = new Chambre ($hotel1, "2", 2, false, 120);
+$chambre3 = new Chambre ($hotel1, "3", 2, false, 120);
+$chambre4 = new Chambre ($hotel1, "4", 2, false, 120);
+$chambre16 = new Chambre ($hotel1, "16", 2, true, 300);
+$chambre17 = new Chambre ($hotel1, "17", 2, true, 300);
+$chambre18 = new Chambre ($hotel1, "18", 2, true, 300);
+$chambre19 = new Chambre ($hotel1, "19", 2, true, 300);
 
 ?>
 
@@ -96,6 +90,97 @@ $resa3 = new Resa ($client2, $chambre4, "01-04-2021", "17-04-2021");
 
         </div>
 
+        <div class="dashboardhotel-container">
+
+            <div class="dashboard-hotel01">
+
+                <?php 
+
+                    echo $hotel1 -> afficherRecapHotel();
+
+                ?>
+
+            </div>
+
+        </div>
+
+        <div class="resaclient-box">
+
+            <div class="resa-client02">
+
+                <?php
+
+
+                    $resa2 = new Resa ($client2, $chambre3, "11-03-2021", "15-03-2021");
+                    $resa3 = new Resa ($client2, $chambre4, "01-04-2021", "17-04-2021");
+                    $resa4 = new Resa ($client2, $chambre16, "20-11-2023", "12-12-2023");
+
+                    echo $client2 -> afficherResa();
+                  
+
+                ?>
+
+            </div>
+
+            <div class="resahotel-box">
+
+                <div class="resa-hotel01">
+
+                    <?php
+
+                        echo $hotel1 -> afficherResa();
+
+                    ?>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="dashboardhotel-container">
+
+            <div class="dashboard-hotel01">
+
+                <?php 
+
+                    echo $hotel1 -> afficherRecapHotel();
+
+                ?>
+
+            </div>
+
+        </div>
+
+        <div class="resaclient-box">
+
+            <div class="resa-client02">
+    
+                <?php
+    
+                    echo $client2 -> annulationResa($resa2);
+                    echo $client2 -> afficherResa();
+    
+                ?>
+    
+            </div>
+
+        </div>
+
+        <div class="resahotel-box">
+
+            <div class="resa-hotel01">
+
+                <?php
+
+                    echo $hotel1 -> afficherResa();
+
+                ?>
+
+            </div>
+
+        </div>
+    
         <div class="dashboardhotel-container">
 
             <div class="dashboard-hotel01">

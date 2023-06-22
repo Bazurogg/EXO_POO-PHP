@@ -130,7 +130,8 @@ class Hotel {
         echo "<h3>Réservation de l'hotel : " . $this -> getNomHotel() . $this -> getEtoiles() . $this -> getVille() . "</h3>";
 
         if ($this -> _resa) {
-            echo '<span class="resa-counter"' . count($this -> _resa) . ' RÉSERVATIONS</span>';
+            echo '<span class="badge badge-success">' . count($this -> _resa) . ' RÉSERVATIONS TOTALE</span>';
+
             foreach ($this -> _resa as $resa) {
                 echo  $resa;
             } 
@@ -139,7 +140,18 @@ class Hotel {
         }
 
     }
-    
+
+    public function annulationResa(Resa $resa) {
+
+        if ($key = array_search($resa, $this -> _resa) !== false ){
+
+            $resa -> getChambre() -> setDispo(true); 
+
+            unset ($this -> _resa[$key]);
+        }
+
+    }
+
     public function nbChambresDispo(){
         $nbChambres = count($this -> _chambres) - count($this -> _resa);
         return $nbChambres;
