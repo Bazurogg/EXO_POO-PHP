@@ -1,0 +1,54 @@
+
+*, ::before, ::after {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.main-container {
+
+    padding: 40px;
+    
+}
+
+.hotel01 {
+
+    margin-bottom: 60px;
+
+}
+
+.resa-hotel01 {
+
+    margin-bottom: 70px;
+
+}
+
+.resa-hotel02 {
+
+    margin-bottom: 70px;
+
+}
+
+.resa-client02 {
+
+    margin-bottom: 100px;
+
+}
+
+.table .thead-light th {
+
+    background-color: unset;
+    border-color: unset;
+    border: none;
+
+}
+
+tbody {
+
+    border-bottom: 1px solid #cbcbcb;
+
+}
+
+
